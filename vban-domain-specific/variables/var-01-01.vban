@@ -1,0 +1,39 @@
+// vban::01
+
+
+variable XX_XX :
+	display : "Displayable title of the variable"
+	type : reel
+	primary : 
+		// BuiltIn
+	secondary : 
+		// BuiltIn
+
+
+constraint N : 
+	dependencies : 
+		01_01
+		02_03
+		01_99
+	impact : 03_45
+	text : 
+		"INSEE1" : uuid
+		"INSEE2" : uuid
+		"INSEE3" : uuid
+	context : 
+		// Conditions related to context
+		// subject = #
+		// destination_from = #
+		// destination_to = #
+		// destination_is = #
+
+	conditions : 
+		// Conditions relevant to go through the graph 
+		01_01 >= 3 : 
+			02_03 in 2 : 34
+			else : vb_null
+		else : 23
+
+
+
+So we need to define a parser ; 
